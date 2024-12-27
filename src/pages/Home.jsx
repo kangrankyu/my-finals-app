@@ -8,10 +8,18 @@ import ExpenseList from '../components/ExpenseList';
 import getMonth from '../utils/getMonth';
 import styled from 'styled-components';
 
-const Container = styled.div`
+
+
+const Main = styled.div`
+    width: 100% ;
+    max-width: 800pX;
     background-color: aqua;
-    width: 100vw;
-    height: 100vh;
+    margin: 0px  auto ;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 
 `
 const Home = () => {
@@ -43,14 +51,16 @@ const Home = () => {
     );
 
     return (<>
-        <Container>
+
+        <Main>
             <MonthNavigation setMonth={setmonth} />
             <CreateExpense
                 setmonth={setmonth}
                 expenses={expenses}
                 setexpenses={setexpenses} />
             <ExpenseList expenses={newMonth} />
-        </Container>
+        </Main>
+
 
     </>
     )
