@@ -3,8 +3,6 @@
 //Zero Base으로 1월은 0입니다. 그래서 getMonth() + 1로 처리해야 합니다.
 
 const getMonth = (date) => {
-  // console.log(new Date(date).getMonth() + 1);
-
   return new Date(date).getMonth() + 1;
 };
 
