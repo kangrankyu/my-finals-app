@@ -40,7 +40,12 @@ const Input = styled.input`
     border-radius: 4px;
     font-size: 14px;
 `
-
+const Label = styled.label`
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    text-align: left;
+`
 const CreateExpense = ({ expenses, setexpenses, setmonth }) => {
     const [formdata, setformdata] = useState({
         date: "2024-01-01",
@@ -96,14 +101,14 @@ const CreateExpense = ({ expenses, setexpenses, setmonth }) => {
         <>
             <Section>
                 <Form action="" onSubmit={onSubmitHandler} >
-                    <Inputbox> <label style={{ fontSize: "12px" }} htmlFor="">날짜</label> <Input type="text" id='date' placeholder=' YYYY-MM-DD' value={formdata.date} onChange={onchangeHandler} /></Inputbox>
-                    <Inputbox> <label style={{ fontSize: "12px" }} htmlFor="">항목</label>  <Input type="text" id='item' placeholder='지출항목' value={formdata.item} onChange={onchangeHandler} /></Inputbox>
-                    <Inputbox> <label style={{ fontSize: "12px" }} htmlFor="">금액</label> <Input type="number" id='amount' placeholder='지출금액' value={formdata.amount} onChange={onchangeHandler} /></Inputbox>
-                    <Inputbox> <label style={{ fontSize: "12px" }} htmlFor=""> 내용</label>   <Input type="text" id='description' placeholder='지출내용' value={formdata.description} onChange={onchangeHandler} /></Inputbox>
+                    <Inputbox> <Label>날짜</Label>  <Input type="text" id='date' placeholder=' YYYY-MM-DD' value={formdata.date} onChange={onchangeHandler} /></Inputbox>
+                    <Inputbox>  <Label>항목</Label> <Input type="text" id='item' placeholder='지출항목' value={formdata.item} onChange={onchangeHandler} /></Inputbox>
+                    <Inputbox> <Label>금액</Label> <Input type="number" id='amount' placeholder='지출금액' value={formdata.amount} onChange={onchangeHandler} /></Inputbox>
+                    <Inputbox>   <Label>내용</Label><Input type="text" id='description' placeholder='지출내용' value={formdata.description} onChange={onchangeHandler} /></Inputbox>
                     <Button>저장</Button>
                 </Form>
 
-            </Section>
+            </Section >
 
 
 
