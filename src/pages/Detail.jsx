@@ -19,7 +19,7 @@ const DetailInput = styled.input`
     border: 1px solid rgb(221, 221, 221);
     border-radius: 4px;
     font-size: 14px;
-    margin-top: 10px;
+
 
 `
 const DetailInputbox = styled.div` 
@@ -54,7 +54,13 @@ const BackButton = styled(Button)`
   &:hover {
     background-color: #5a6268;
   }
-`;
+`
+const Inputlabel = styled.label` 
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+`
 const Detail = () => {
 
     const Params = useParams()
@@ -157,17 +163,27 @@ const Detail = () => {
 
             <DetailBox>
                 <DetailInputbox>
+                    <Inputlabel>날짜</Inputlabel>
                     <DetailInput type="text" id='date' value={datailformdata.date} onChange={onchangeHandler} />
+                </DetailInputbox>
+                <DetailInputbox>
+                    <Inputlabel>항목</Inputlabel>
                     <DetailInput type="text" id='item' value={datailformdata.item} onChange={onchangeHandler} />
+                </DetailInputbox>
+                <DetailInputbox>
+                    <Inputlabel>금액</Inputlabel>
                     <DetailInput type="number" id='amount' value={datailformdata.amount} onChange={onchangeHandler} />
+                </DetailInputbox>
+                <DetailInputbox>
+                    <Inputlabel>내용</Inputlabel>
                     <DetailInput type="text" id='description' value={datailformdata.description} onChange={onchangeHandler} />
 
-                    <ButtonGroup>
-                        <Button onClick={updateHandler} >수정</Button>
-                        <Button onClick={DeleteOnhandler} danger="true">삭제 </Button>
-                        <Button onClick={() => Navigation("/")}>뒤로가기</Button>
-                    </ButtonGroup>
                 </DetailInputbox>
+                <ButtonGroup>
+                    <Button onClick={updateHandler} >수정</Button>
+                    <Button onClick={DeleteOnhandler} danger="true">삭제 </Button>
+                    <Button onClick={() => Navigation("/")}>뒤로가기</Button>
+                </ButtonGroup>
 
 
 

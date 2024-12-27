@@ -13,7 +13,7 @@ import styled from 'styled-components';
 const Main = styled.div`
     width: 100% ;
     max-width: 800pX;
-    background-color: aqua;
+    background-color: 2ec4b6;
     margin: 0px  auto ;
     margin-top: 20px;
     display: flex;
